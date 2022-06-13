@@ -1,36 +1,36 @@
 #page {
     display: grid;
     width: 100%;
-    height: 200px;
-    grid-template: [header-left] "head head" 30px [header-right] [main-left] "nav main" 1fr [main-right] [footer-left] "nav foot" 30px [footer-right] / 120px 1fr;
+    height: 100%;
+    grid-template: [header-left] "head head" 50px [header-right] [main-left] "nav main" 1fr [main-right] [footer-left] "nav foot" 30px [footer-right] / 150px 1fr;
 }
 
 header {
-    background-color: rgb(203, 204, 203);
     grid-area: head;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
+    border-bottom: 1px black solid;
 }
 
 
 
 nav {
-    background-color: lightblue;
     grid-area: nav;
     height: 100%;
+    border-right: 1px black solid;
+    padding-top: 30px;
 }
 
 main {
-    background-color: yellow;
     grid-area: main;
     height: 100vh;
-
+    padding-left: 30px;
+    padding-top: 30px;
 }
 
 footer {
-    background-color: red;
     grid-column: foot;
 }
